@@ -1,0 +1,26 @@
+This list can be used for prolonging certain animations
+such as, making the gather animation last longer.
+
+0-15 TPose
+15-75 Idle
+90-180 Walk
+195-250 Run
+265-405 Use
+420-620 PickUp
+635-725 Hit
+740-790 Death
+805-835 Falling
+850-995 Jump
+//850-882 Jump(Up)
+//897-927 Jump(InAir)
+//942-995 Jump(Down&StandUp)
+1010-1270 Gather
+//1010-1070 Gather(HandsUp)
+//1070-1210 Gather(Gathering)
+//1210-1270 Gather(HandsDown)
+
+
+
+
+
+
