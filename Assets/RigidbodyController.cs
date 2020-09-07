@@ -15,7 +15,7 @@ public class RigidbodyController : MonoBehaviour
 	Vector3 inputVec = Vector3.zero;
 	Rigidbody body;
 	Vector3 lookDir = Vector3.forward;
-	float coyoteTime = 0;
+	public float coyoteTime = 0;
 
 	void Start()
 	{
@@ -37,11 +37,15 @@ public class RigidbodyController : MonoBehaviour
 		}
 
 		//do a jumppy
-		if (Input.GetButtonDown("Jump") && coyoteTime > 0)
+		if (Input.GetButton("Jump"))
 		{
+			if (coyoteTime > 0)
+			{
+				body.velocity = Vector3.up * 7.5f;
+			}
 			coyoteTime = 0;
-			body.velocity = Vector3.up * 7.5f;
 		}
+
 	}
 	void FixedUpdate()
 	{
@@ -61,7 +65,7 @@ public class RigidbodyController : MonoBehaviour
 	}
 	public void DetectGround()
 	{
-		if (Physics.Raycast(transform.position, Vector3.down, 0.1f, groundLayers))
+		if (Physics.Raycast(transform.position + Vector3.up * 0.01f, Vector3.down, 0.02f, groundLayers))
 		{
 			coyoteTime = 0.2f; //tweak this
 		}

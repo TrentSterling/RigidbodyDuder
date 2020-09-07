@@ -188,6 +188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerModel: {fileID: 1386041283}
+  speed: 2
+  stopStrength: 0.3
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &3506831416014787192
 PrefabInstance:
   m_ObjectHideFlags: 0
