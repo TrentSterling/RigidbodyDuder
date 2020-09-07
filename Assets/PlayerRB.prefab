@@ -79,7 +79,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3506831415498027662}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -194,6 +194,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   coyoteTime: 0
+  physCollider: {fileID: 3506831415498027648}
+  slipperyMaterial: {fileID: 13400000, guid: dd21cd8bd2dae974d9d9b3783811d29b, type: 2}
+  stickyMaterial: {fileID: 13400000, guid: 365a935ddbb8fd04fbb0a87c008c45da, type: 2}
 --- !u!1001 &3506831416014787192
 PrefabInstance:
   m_ObjectHideFlags: 0
