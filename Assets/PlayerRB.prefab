@@ -193,6 +193,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+  coyoteTime: 0
 --- !u!1001 &3506831416014787192
 PrefabInstance:
   m_ObjectHideFlags: 0
