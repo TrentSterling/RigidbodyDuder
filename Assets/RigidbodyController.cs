@@ -67,7 +67,7 @@ public class RigidbodyController : MonoBehaviour
 	{
 		if (Physics.Raycast(transform.position + Vector3.up * 0.01f, Vector3.down, 0.02f, groundLayers))
 		{
-			coyoteTime = 0.2f; //tweak this
+			coyoteTime = 0.04f; //tweak this
 		}
 	}
 }

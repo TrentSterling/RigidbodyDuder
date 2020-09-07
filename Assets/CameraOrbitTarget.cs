@@ -32,7 +32,7 @@ public class CameraOrbitTarget : MonoBehaviour
 		xRot += mouseY;
 		yRot += mouseX;
 
-		xRot = Mathf.Clamp(xRot, -45, 85);
+		xRot = Mathf.Clamp(xRot, -85, 85);
 
 		Cursor.lockState = CursorLockMode.Locked;
 
