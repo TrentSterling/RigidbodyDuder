@@ -9,8 +9,8 @@ public class CameraOrbitTarget : MonoBehaviour
 	public float xRot = 0;
 	public float yRot = 0;
 
-	public float xRotSmoothed = 0;
-	public float yRotSmoothed = 0;
+	private float xRotSmoothed = 0;
+	private float yRotSmoothed = 0;
 
 	public float mouseSensivity = 5f;
 	public float wheelSensivity = 6f;

@@ -10,10 +10,12 @@ public class RigidbodyController : MonoBehaviour
 	public float speed = 2f;
 
 	public float stopStrength = 0.3f;
+	public LayerMask groundLayers;
 
 	Vector3 inputVec = Vector3.zero;
 	Rigidbody body;
 	Vector3 lookDir = Vector3.forward;
+	float coyoteTime = 0;
 
 	void Start()
 	{
@@ -35,13 +37,16 @@ public class RigidbodyController : MonoBehaviour
 		}
 
 		//do a jumppy
-		if (Input.GetButtonDown("Jump"))
+		if (Input.GetButtonDown("Jump") && coyoteTime > 0)
 		{
-			body.velocity = Vector3.up * 5f;
+			coyoteTime = 0;
+			body.velocity = Vector3.up * 7.5f;
 		}
 	}
 	void FixedUpdate()
 	{
+		DetectGround(); //set jump stuff
+
 		//add stop force
 		Vector3 velocity = body.velocity;
 		velocity.y = 0; //ignore y
@@ -53,5 +58,12 @@ public class RigidbodyController : MonoBehaviour
 	void LateUpdate()
 	{
 		playerModel.rotation = Quaternion.Slerp(playerModel.rotation, Quaternion.LookRotation(lookDir), Time.deltaTime * 5f);
+	}
+	public void DetectGround()
+	{
+		if (Physics.Raycast(transform.position, Vector3.down, 0.1f, groundLayers))
+		{
+			coyoteTime = 0.2f; //tweak this
+		}
 	}
 }
