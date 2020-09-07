@@ -36,8 +36,8 @@ public class CameraOrbitTarget : MonoBehaviour
 
 		Cursor.lockState = CursorLockMode.Locked;
 
-		xRotSmoothed = Mathf.Lerp(xRotSmoothed, xRot, Time.smoothDeltaTime * 25f);
-		yRotSmoothed = Mathf.Lerp(yRotSmoothed, yRot, Time.smoothDeltaTime * 25f);
+		xRotSmoothed = Mathf.Lerp(xRotSmoothed, xRot, Time.smoothDeltaTime * 15f);
+		yRotSmoothed = Mathf.Lerp(yRotSmoothed, yRot, Time.smoothDeltaTime * 15f);
 
 		transform.rotation = Quaternion.Euler(xRotSmoothed, yRotSmoothed, 0);
 
